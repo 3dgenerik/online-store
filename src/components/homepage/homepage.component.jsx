@@ -4,6 +4,7 @@ import { MenuItem } from '../menu-item/menu-item.component';
 import { Directory } from '../directory/directory.component';
 import {sections} from '../../directory.data';
 
+
 export const Homepage = (props) => {
     const [menuItems, setMenuItems] = useState([]);
 
@@ -19,11 +20,14 @@ export const Homepage = (props) => {
             title = {user.title.toUpperCase()}
             subtitle = {'Shop now'.toUpperCase()}
             size = {user.size}
+            url = {() => props.history.push(`${user.linkUrl}`)}
             />
+
     })
 
     return(
         <div className = 'homepage'>
+ 
             <Directory>
                 {populateItems}
             </Directory>
