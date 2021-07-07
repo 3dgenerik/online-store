@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './homepage.styles.scss'
 import MenuItem from '../menu-item/menu-item.component';
 import { Directory } from '../directory/directory.component';
-import {sections} from '../../directory.data';
+import SECTIONS_DATA from '../../sections.data';
 
 
-export const Homepage = ({history}) => {
+export const Homepage = () => {
     const [menuItems, setMenuItems] = useState([]);
-
     useEffect(() => {
-        setMenuItems(sections);
+        setMenuItems(SECTIONS_DATA);
     }, [])
 
     const populateItems = menuItems.map(({id, imageUrl, linkUrl, title, size}) => {
@@ -26,7 +25,6 @@ export const Homepage = ({history}) => {
 
     return(
         <div className = 'homepage'>
- 
             <Directory>
                 {populateItems}
             </Directory>
