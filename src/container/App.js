@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { Homepage } from '../components/homepage/homepage.component.jsx';
 import Shop from '../components/shop/shop.component';
-import Header from '../header/header.component';
+import Header from '../components/header/header.component';
 import 'tachyons';
 import {Switch, Route} from 'react-router-dom';
 

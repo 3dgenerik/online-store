@@ -2,10 +2,10 @@ import React from 'react';
 import './header.style.scss';
 
 //OVAKO MORA AKO HOCEMO DA IMPORTUJEMO SVG
-import {ReactComponent as Logo} from '../assets/crown.svg';
+import {ReactComponent as Logo} from '../../assets/crown.svg';
 
 import { withRouter } from 'react-router-dom';
-import Cart from '../assets/shopping-cart.png'
+import Cart from '../../assets/shopping-cart.png'
 
 const Header = (props) => {
     const homeRoute = () => {
