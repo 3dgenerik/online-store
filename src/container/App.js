@@ -6,7 +6,6 @@ import {Switch, Route, Link} from 'react-router-dom';
 
 
 const HatsPage = (props) => {
-  console.log(props);
   const params = props.match.params;
   const val = Object.values(params);
   return (

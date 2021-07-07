@@ -1,26 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import './homepage.styles.scss'
-import { MenuItem } from '../menu-item/menu-item.component';
+import MenuItem from '../menu-item/menu-item.component';
 import { Directory } from '../directory/directory.component';
 import {sections} from '../../directory.data';
 
 
-export const Homepage = (props) => {
+export const Homepage = ({history}) => {
     const [menuItems, setMenuItems] = useState([]);
 
     useEffect(() => {
         setMenuItems(sections);
     }, [])
 
-    const populateItems = menuItems.map(user => {
+    const populateItems = menuItems.map(({id, imageUrl, linkUrl, title, size}) => {
         return <MenuItem
-            key = {user.id}
-            image = {user.imageUrl}
-            link = {user.linkUrl}
-            title = {user.title.toUpperCase()}
+            key = {id}
+            image = {imageUrl}
+            link = {linkUrl}
+            title = {title.toUpperCase()}
             subtitle = {'Shop now'.toUpperCase()}
-            size = {user.size}
-            url = {() => props.history.push(`${user.linkUrl}`)}
+            size = {size}
             />
 
     })
