@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Homepage } from '../components/homepage.component';
+import { Homepage } from '../components/homepage/homepage.component.jsx';
+import 'tachyons';
 
 function App() {
   return (
